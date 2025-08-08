@@ -10,3 +10,9 @@ def main():
     text_len = len(word_list)
     print(f"{text_len} words found in the document")
 #takes file and counts words
+def stats():
+    book_text = get_book_text("books/frankenstein.txt")
+    book_text = book_text.lower()
+    return book_text.lower()
+
+
