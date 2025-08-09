@@ -1,5 +1,5 @@
 from stats import main, stats
 
-main()
-stats()
+print(main())
+print(stats())
     
