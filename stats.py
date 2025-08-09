@@ -25,7 +25,7 @@ def stats():
 def sort_on(items):
     return items["num"]
 
-def generate_report():
+def sort_dict():
     sorted_dict = []
     letter_count = {}
     letter_count = stats()
@@ -37,4 +37,16 @@ def generate_report():
             ) 
     sorted_dict.sort(reverse= True,key=sort_on)
     return sorted_dict
+#sorts dict
 
+def generate_report():
+    print("============ BOOKBOT ============")
+    print("Analyzing book found at books/frankenstein.txt...")
+    print("----------- Word Count ----------")
+    print(main())
+    print("--------- Character Count -------")
+    sorted_dict = sort_dict()
+    for letter in sorted_dict:
+        print(f"{letter["name"]}: {letter["num"]}")
+    print("============= END ===============")
+#prints report
