@@ -21,3 +21,20 @@ def stats():
             letter_count[letter] = 1
     return (letter_count)
 #counts letters in text
+
+def sort_on(items):
+    return items["num"]
+
+def generate_report():
+    sorted_dict = []
+    letter_count = {}
+    letter_count = stats()
+
+    for letter in letter_count:
+        if letter.isalpha() == True:
+            sorted_dict.append(
+                {"name": letter, "num": letter_count[letter]} 
+            ) 
+    sorted_dict.sort(reverse= True,key=sort_on)
+    return sorted_dict
+
