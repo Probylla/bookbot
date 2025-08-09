@@ -11,8 +11,13 @@ def main():
     print(f"{text_len} words found in the document")
 #takes file and counts words
 def stats():
+    letter_count = {}
     book_text = get_book_text("books/frankenstein.txt")
     book_text = book_text.lower()
-    return book_text.lower()
-
-
+    for letter in book_text:
+        if letter in letter_count:
+            letter_count[letter] += 1
+        else:
+            letter_count[letter] = 1
+    print(letter_count)
+#counts letters in text

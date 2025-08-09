@@ -1,4 +1,5 @@
-from stats import main
+from stats import main, stats
 
 main()
+stats()
     
