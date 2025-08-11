@@ -8,7 +8,7 @@ def main():
     book_text = get_book_text("books/frankenstein.txt")
     word_list = book_text.split()
     text_len = len(word_list)
-    return (f"{text_len} words found in the document")
+    return (f"Found {text_len} total words")
 #takes file and counts words
 def stats():
     letter_count = {}
